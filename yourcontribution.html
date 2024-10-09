@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contri.css">
+</head>
+<body>
+
+   
+    <div class="dashboard">
+        
+            <h1>YOUR CONTRIBUTION:</h1>
+            <div class="search-container">
+                
+            </div>
+           
+        </header>
+        <main>
+            <section class="overall-chart">
+                <div class="chart-header">
+
+                    <h2>Overall Points </h2>
+                    <div class="year-options">
+                        <span class="this-year">This Year</span>
+                        <span class="last-year">Last Year</span>
+                        <span class="sort-option">Sort by Year</span>
+                    </div>
+                </div>
+                <div class="chart">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </section>
+            <section class="lower-half">
+                <div class="stats">
+                    <div class="stat-item earnings">
+                        <h3>Total Donation</h3>
+                        <p class="amount"> ₹2,500.00</p>
+                        <span class="growth">Up to 5% from Last Year</span>
+                    </div>
+                    <div class="stat-item orders">
+                        <h3>Total Clean-ups Participated</h3>
+                        <p class="amount">12</p>
+                        <span class="growth">Up to 35% from Last Year</span>
+                    </div>
+                    <div class="stat-item ratings">
+                        <h3>Total Ratings</h3>
+                        <p class="amount">4.5</p>
+                        <span class="growth"> 20% more than Last  </span>
+                    </div>
+                </div>
+                <section class="messages">
+                    <h3>Messages</h3>
+                    <div class="message-item">
+                        <p><strong>Avery Davis</strong> <span>5m ago</span></p>
+                        <p>Lorem ipsum dolor sit ...</p>
+                    </div>
+                    <div class="message-item">
+                        <p><strong>Teddy Yu</strong> <span>20m ago</span></p>
+                        <p>Lorem ipsum dolor sit ...</p>
+                    </div>
+                    <div class="message-item">
+                        <p><strong>Yael Amari</strong> <span>2h ago</span></p>
+                        <p>Lorem ipsum dolor sit ...</p>
+                    </div>
+                    <a href="#" class="show-all">Show All</a>
+                </section>
+            </section>
+            
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('lineChart').getContext('2d');
+        const lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'This Year',
+                    data: [10, 25, 50, 30, 75, 45, 90, 60, 80, 35, 60, 25],
+                    borderColor: '#3a80f8',
+                    borderWidth: 2,
+                    fill: false
+                }, {
+                    label: 'Last Year',
+                    data: [5, 20, 45, 35, 60, 40, 75, 55, 70, 30, 50, 20],
+                    borderColor: '#ddd',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

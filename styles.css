@@ -1,0 +1,1154 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;  
+    background-color: #f0f8ff;  
+}
+
+* {
+    text-decoration: none;
+}
+
+.project-title {
+    font-size: 58px; 
+    font-weight: 700; 
+    text-align: center;
+    color: #41d8f0;
+}
+
+h1, h2, h3 {
+    color: #005f73;  
+}
+
+p, li, label {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 15px 20px; /* Keep some padding for navbar items */
+    height: 4rem; /* Height of the navbar */
+    font-weight: 800;
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed; /* Keep the navbar fixed */
+    top: 0; /* Set the navbar to the top of the page */
+    left: 0; /* Align the navbar to the left */
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+
+/* Adjusting the navbar links */
+.navbar a {
+    text-decoration: none;
+    color: #41d8f0;
+    margin: 0 15px;
+    font-size: 1.7rem;
+    border: none;
+    transition: border-bottom 0.8s ease-in-out; 
+    position: relative;
+    padding-right: 10px;
+}
+
+.navbar .nav-left {
+    font-size: 2.9rem;
+    color: #2775b4;
+    text-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 3.1px; /* Set the border height */
+    background: #0077b6; /* Color of the border */
+    transition: width 0.4s ease-in-out; /* Smooth transition effect */
+}
+
+/* On hover, expand the border from left to right */
+.navbar a:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+.navbar .nav-center a:hover,
+.navbar .login-icon:hover {
+    color: #333;
+}
+
+  
+  /* Sidebar Styles */
+  .sidenav{
+    width:50px;
+    height:100%;
+    position: fixed;
+    top:3rem;
+    left:0;
+    padding:30px 15px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    transition: width 0.4s;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .sidenav:hover{
+    width: 200px;
+  }
+  
+
+  .sidenav:hover ul li p{
+    display: block;
+  }
+
+  .sidenav:hover ul li img{
+    margin-right: 10px;
+  }
+
+  .sidenav:hover ul li{
+    justify-content: flex-start;
+    
+  }
+
+  .sidenav li:hover{
+    background-color: rgba(0, 255, 255, 0.2);
+    color:white
+  }
+  ul{
+    list-style: none;
+    padding: 0 15px;
+
+  }
+
+  ul li{
+    margin:30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  ul li img{
+    width:30px;
+    margin-right: 0px;
+  }
+
+ ul li p{
+    white-space: nowrap;
+    display: none;
+ }
+
+  /* Main Content Area */
+  .main-container{
+    margin-top: 5.8rem;
+    
+  }
+.title-image{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/65272e44bd4f9022f58884d2/1702591117221-8YP0K9IP9GWZXZWLCXJ3/Option%2B2-2%2B%281%29.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:28rem;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+  .title-image h1{
+    color: white;
+    text-align: center;
+    margin-top: 5rem;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -2px;
+    font-weight: 500;
+    color: #fff;
+  width:25rem;
+  margin-left: 6rem;
+
+  }
+  .title-image p{
+    color:white;
+    text-align: center;
+    margin-top: 7.8rem;
+    font-size: 1.6rem;
+    width:35rem;
+    height: 5rem;
+    margin-left: 13rem;
+    font-weight: 600;
+  }
+
+  .content-2{
+    width:45rem;
+    border-radius: 1.2rem;
+    margin-top: 4rem;
+    box-shadow: 2px 2px 30px 2px rgb(0, 174, 255);
+    margin-left: 18rem;
+    padding: 1.2rem;
+    transition: all 0.3s ease-in;
+  }
+  .content-2:hover{
+    transform: translateY(-10px);
+  }
+  .content-2 h2{
+   color:#41d8f0;
+    text-align: left;
+  }
+
+  .content-2 p{
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .sdg-content{
+    margin-top: 2rem;
+   
+  }
+
+  .sdg-content h2{
+    color: #41d8f0
+    ;
+   margin-left: 38rem;
+   font-size: 3rem;
+  }
+  .sdg-content-img1{
+    width:15rem;
+    height: 15rem;
+   margin-left: 13rem;
+   display: flex;
+   flex-direction: row;
+   margin-top: 2.5rem;
+  }
+  .sdg-content-img1 img{
+    width:12rem;
+    height: 12rem;
+    margin-left: 2rem;
+    border-radius: 5px;
+   
+    
+  }
+
+  .content-3-container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 3rem;
+  }
+  .content-3-container p{
+    width:2rem;
+  }
+  .content-3{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 14rem;
+  }
+  .content-3-head{
+    color: black;
+    
+    font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  }
+
+  .content-4-head{
+    color:#41d8f0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+
+
+  .contribute-section {
+    padding: 60px 20px; /* Padding for top and sides */
+    background-color: #e9f6fa; /* Light water-themed background */
+    text-align: center; /* Center all text */
+}
+
+.contribute-section h2 {
+    font-size: 2.5em; /* Main heading size */
+    color: #41d8f0
+    ; /* Dark blue color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.contribute-section p {
+    font-size: 1.2em; /* Paragraph size */
+    color: #333; /* Text color */
+    margin-bottom: 40px; /* Space below paragraph */
+}
+
+/* Cards Container */
+.contribute-cards {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    justify-content: center; /* Center the cards */
+    gap: 30px; /* Space between cards */
+}
+
+/* Individual Card Styles */
+.contribute-card {
+    background: white; /* White background for each card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Fixed width for each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribute-card:hover {
+    transform: scale(1.2); /* Lift card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card Icon Styles */
+.contribute-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px; /* Space below icon */
+    border-radius: 100%;
+    border: 2px solid #0077b6;
+}
+
+/* Card Heading and Paragraph */
+.contribute-card h3 {
+    font-size: 1.5em;
+    color: #0077b6; /* Light blue for headings */
+    margin-bottom: 10px;
+}
+
+.contribute-card p {
+    color: #555; /* Slightly lighter gray */
+    margin-bottom: 20px; /* Space below text */
+    padding: 0 10px; /* Small padding on sides for text */
+}
+
+/* Button Styles */
+.contribute-btn {
+    background: #005f73; /* Dark blue background */
+    color: white;
+    border: none;
+    padding: 17px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.contribute-btn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+    width:0;
+    height:0;
+    border-radius: 50%;
+    transition: width 0.5s , height 0.5s;
+    left:50%;
+    right:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.contribute-btn span{
+    position: relative;
+    z-index: 1;
+}
+.contribute-btn:hover {
+    background: white; /* Change color on hover */
+    color: black;
+    border-radius: 25px;
+    border:1px solid black; /* Slight lift effect */
+}
+.contribute-btn:hover::before{
+    width:300px;
+    height: 300px;
+    
+    
+}
+
+
+ /*Footer*/
+
+ /* General Footer Styles */
+ .footer{
+    background-color:#005f73 ;
+    width:100%;
+ }
+.footer-container {
+    background-color: #005f73; /* Dark Ocean Blue */
+    color: white;
+    text-align: center; /* Center-align text */
+    padding: 40px 20px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1000px;
+    margin: auto;
+    gap: 2rem; /* Space between different footer sections */
+}
+
+/* Footer Top Section Styles */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items */
+    gap: 1rem;
+}
+
+.comp-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.filler-text {
+    font-size: 0.9rem;
+    color: #e9d8a6; /* Light Yellow */
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Spacing between social icons */
+}
+
+.social-link img {
+    width: 24px; /* Set consistent size */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Footer Grid Section */
+.footer-grid {
+    display: flex;
+    justify-content: space-around; /* Even spacing */
+    width: 100%;
+    max-width: 800px; /* Limit the width of the grid */
+}
+
+.footer-grid-column {
+    flex: 1; /* Each column takes equal space */
+}
+
+.footer-grid-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-links-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.footer-links-list li {
+    margin: 5px 0; /* Reduce space between list items */
+}
+
+.footer-link {
+    color: #cae9ff; /* Light blue link color */
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #e9d8a6; /* Light yellow on hover */
+}
+
+/* Footer Bottom Section */
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #e9d8a6;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(233, 216, 166, 0.3); /* Soft top border */
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-grid {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer-grid-column {
+        margin: 0 0 10px 0; /* Space out the columns */
+    }
+}
+
+
+/* General Styling for the Participation Page */
+.participation-page {
+    padding: 60px 20px;
+    background: #f0f8ff; /* Light blue background */
+}
+
+.header-section {
+    margin-top: 4rem;
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Header background image */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
+    text-align: center;
+    color: #41d8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section h1 {
+    
+    margin-bottom: 20px;
+    color: #ff4400de; /* Deep Blue */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow to increase readability */
+    font-weight: 800; /* Bold text for emphasis */
+    font-size: 3rem; /* Adjust font size as needed */
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+}
+
+
+.header-section p{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.cta-btn {
+    background: #005f73; /* Dark blue background */
+    color: white;
+    border: none;
+    padding: 17px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.cta-btn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+    width:0;
+    height:0;
+    border-radius: 50%;
+    transition: width 0.5s , height 0.5s;
+    left:50%;
+    right:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.cta-btn span{
+    position: relative;
+    z-index: 1;
+}
+.cta-btn:hover {
+    background: white; /* Change color on hover */
+    color: black;
+    border-radius: 25px;
+    border:1px solid black; /* Slight lift effect */
+}
+.cta-btn:hover::before{
+    width:300px;
+    height: 300px;
+    
+    
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in one row */
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.card {
+    background: #ec1c46;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.card h2{
+    color:#41d8f0
+    ;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 10px 2px black;
+}
+
+.participate-btn {
+    background: #0a9396;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.participate-btn:hover {
+    background: #005f73;
+}
+
+.success-stories {
+    padding: 60px 20px;
+    /* Light background color for contrast */
+    text-align: center;
+}
+
+.success-stories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #41d8f0
+    ; /* Deep water blue */
+}
+
+.success-stories h3{
+   color: #41d8f0;
+
+}
+.success-stories p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.story-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px); /* Elevate card on hover */
+}
+
+.story-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Cover the entire area */
+    border-radius: 10px;
+}
+
+h3 {
+    color: #005f73; /* Deep water blue */
+}
+
+blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    color: #333; /* Dark text for quotes */
+}
+
+.read-more {
+    background: #0a9396; /* Teal */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    background: #005f73; /* Darker shade on hover */
+}
+
+.impact-stats {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(0, 51, 102, 0.1); /* Light overlay for stats */
+    border-radius: 10px;
+}
+
+
+
+/*ECO SHOPS*/
+.eco-main-content {
+    /*margin-left: 240px; */
+    padding: 20px;
+    background-color: white;
+    margin-top: 4rem;
+}
+
+.eco-projecttitle1{
+    font-size: 80px;
+    font-weight: 600;
+}
+.eco-main-content h1 {
+    color: #41d8f0;        
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;  
+    align-items: center;          
+}
+
+.eco-main-content p {
+    color: black;
+    display: flex;
+    font-size: 1.35rem;
+    justify-content: center;  
+    align-items: center; 
+}
+
+.eco-main-content {
+    border-left: 110px;
+        padding: 20px;
+    }
+
+    .eco-product-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        column-gap: 1rem; 
+        row-gap: 1rem; 
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 0 1rem; 
+    }
+    
+    .eco-card {
+        margin: 0; 
+        padding: 20px;
+        background-color: #41d8f0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+    }
+    .eco-card:hover{
+        box-shadow: 2px 2px 2px 3px  #005f73;
+    }
+    
+    .eco-card-img {
+        width: 50%; 
+        height: 100px;
+        border-radius: 9px;
+        border: 2px solid rgba(0, 255, 255, 0.856);
+    }
+
+    .eco-card h3{
+        color: #000;
+    }
+    
+    .eco-itemheading{
+        color: #41d8f0;
+    }
+
+    #price {
+        font-weight: 800;
+    }
+    
+    
+    #price del {
+        text-decoration: line-through; 
+        color: red; 
+        margin-right: 5px; 
+    }
+    
+    
+   .eco-buy-btn {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    
+    .eco-buy-btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .eco-itemheading{
+        color: #41d8f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+/*PRIZES*/
+
+/* Import the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+
+/* Points Section */
+.prizes-points-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color:  white;
+    color: white;
+}
+
+.prizes-prize-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.prizes-points-earned {
+    font-size: 4rem;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: -1px;
+    color: black;
+}
+
+.prizes-points-earned .bold{
+    font-weight: bold;
+    color: RED;
+}
+
+/* Prizes Container */
+.prizes-prizes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.prizes-prize-card {
+    background-color:  #b9dff1;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.prizes-prize-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prizes-prize-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prizes-prize-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.prizes-prize-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.prizes-pointsreq {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.prizes-apply-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prizes-apply-button:hover {
+    background-color: #45a049;
+}
+
+/*PAYMENT*/
+
+
+
+/* Payment form container */
+.payment-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for a sleek look */
+    padding: 30px;
+    border-radius: 15px;
+    width: 420px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative;
+    top:8rem;
+    left: 30rem;
+    right: 10rem;
+}
+
+.payment-container:hover {
+    transform: translateY(-10px); /* Lifting effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Typography and inputs */
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Payment method section */
+.payment-methods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.payment-methods label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f1f3f6;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.payment-methods label:hover {
+    background-color: #e0e3ea;
+}
+
+.payment-methods input {
+    margin-right: 10px;
+    accent-color: #4e54c8; /* Custom color for radio buttons */
+}
+
+/* Input fields */
+.payment-info {
+    display: none;
+}
+
+.credit-card-info, .paypal-info, .upi-info {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.payment-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #4e54c8; /* Focus effect */
+    box-shadow: 0 0 5px rgba(78, 84, 200, 0.5); /* Glowing effect */
+}
+
+/* Button */
+.payment-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e54c8;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: #9297f1;
+    transform: translateY(-3px); /* Slight lifting effect on hover */
+}
+
+.payment-button:active {
+    transform: translateY(0); /* Remove lift when clicked */
+}
+
+.payment-container footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Add a media query for responsiveness */
+@media (max-width: 480px) {
+    .payment-container {
+        width: 90%; /* Make it responsive on small screens */
+        padding: 20px;
+    }
+}
+
+/*LEADERBOARD*/
+
+/* Leaderboard Container */
+.leaderboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Leaderboard Title */
+.leaderboard-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e9d8a6; /* Light yellow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Leaderboard Table */
+.leaderboard-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-table th {
+    background: #005f73; /* Dark blue header */
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.leaderboard-table tbody tr {
+    background: rgba(255, 255, 255, 0.1); /* Light row background */
+    cursor: pointer;
+}
+
+.leaderboard-table tbody tr:hover {
+    background: rgba(10, 147, 150, 0.3); /* Hover effect */
+}
+
+.leaderboard-table tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.leaderboard-table tbody tr:nth-child(1) {
+    background: gold; /* Highlight the top player */
+    font-weight: bold;
+    color: #333;
+}
+
+.leaderboard-table tbody tr:nth-child(2) {
+    background: silver; /* Highlight second place */
+    color: #333;
+}
+
+.leaderboard-table tbody tr:nth-child(3) {
+    background: #cd7f32; /* Highlight third place */
+    color: #333;
+}
+
+.leaderboard-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Animation for Title */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #e9d8a6, 0 0 20px #e9d8a6, 0 0 30px #e9d8a6;
+    }
+    100% {
+        text-shadow: 0 0 20px #e9d8a6, 0 0 30px #e9d8a6, 0 0 40px #e9d8a6;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .leaderboard-title {
+        font-size: 2.5rem;
+    }
+
+    .leaderboard-table th, .leaderboard-table td {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .leaderboard-title {
+        font-size: 2rem;
+    }
+
+    .leaderboard-table th, .leaderboard-table td {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Participate Form</h2>
+        <form id="participateForm" action="submit-form.php" method="POST" onsubmit="return validateForm()">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="18" max="120">
+
+            <!-- City -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+            var age = document.getElementById("age").value;
+            var city = document.getElementById("city").value;
+
+            // Basic validation checks
+            if (name === "" || email === "" || address === "" || age === "" || city === "") {
+                document.getElementById("errorMessage").innerText = "Please fill out all fields.";
+                return false;
+            }
+
+            // Age validation
+            if (age < 18 || age > 120) {
+                document.getElementById("errorMessage").innerText = "Please enter a valid age (18 - 120).";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

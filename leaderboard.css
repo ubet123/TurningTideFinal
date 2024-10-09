@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Fredoka', sans-serif;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafe;
+    padding: 5rem 0;
+    background-image: url('https://media.istockphoto.com/id/1328693155/vector/bright-stadium-arena-lights-vector-design.jpg?s=612x612&w=0&k=20&c=oNtXorOpLDhFwTXYFgTH5j0ibI_AeNUqYkYhtF0TZnA=');
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 15px 20px; /* Keep some padding for navbar items */
+    height: 4rem; /* Height of the navbar */
+    font-weight: 800;
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed; /* Keep the navbar fixed */
+    top: 0; /* Set the navbar to the top of the page */
+    left: 0; /* Align the navbar to the left */
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+
+/* Adjusting the navbar links */
+.navbar a {
+    text-decoration: none;
+    color: #41d8f0;
+    margin: 0 15px;
+    font-size: 1.7rem;
+    border: none;
+    transition: border-bottom 0.8s ease-in-out; 
+    position: relative;
+    padding-right: 10px;
+}
+
+.navbar .nav-left {
+    font-size: 2.9rem;
+    color: #2775b4;
+    text-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 3.1px; /* Set the border height */
+    background: #0077b6; /* Color of the border */
+    transition: width 0.4s ease-in-out; /* Smooth transition effect */
+}
+
+/* On hover, expand the border from left to right */
+.navbar a:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+.navbar .nav-center a:hover,
+.navbar .login-icon:hover {
+    color: #333;
+}
+
+.leaderboard {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 0.2rem;
+    padding: 2rem 0;
+    box-shadow: 0 0.5rem 1rem #5b5be638;
+    position: relative;
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start lower */
+    animation: slideIn 0.5s forwards; /* Apply slide-in animation */
+    margin-bottom: 20px; /* Adds space between leaderboards */
+}
+
+.leaderboard ol {
+    counter-reset: list; /* Reset counter for each new leaderboard */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icon-tabler-share {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background: #fc5c75;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    width: 45px;
+    height: 30px;
+    border-radius: 1rem;
+}
+
+h2 {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+ol {
+    margin-top: 2rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    font-weight: 700;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+li:nth-of-type(odd) {
+    background: #dcdcdc37;
+}
+
+li::before {
+    counter-increment: list;
+    content: counter(list) ". "; /* Display ranking number */
+}
+
+.name {
+    margin: 0 auto 0 1rem;
+}
+
+li:first-of-type {
+    background: #5050d8;
+    opacity: 1;
+    color: #fff;
+    box-shadow: 0 0.2rem 0.5rem #79798e;
+    transform: scale(1.03);
+    animation: bounce 1s infinite alternate; /* Apply bounce effect */
+}
+
+/* Bounce animation for top rank */
+@keyframes bounce {
+    from {
+        transform: scale(1.03);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Hover animation for list items */
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge */
+    background: #41d8f0; /* Light blue background on hover */
+}
+
+.award {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+img {
+    width: 35px;
+    height: 35px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color */
+    position: relative; /* Position for ripple effect */
+}
+
+.exit {
+    background: transparent;
+    opacity: 0.5;
+    transition: opacity 0.3s; /* Fade out transition */
+}
+
+.exit:hover {
+    color: #5050d8;
+    opacity: 1;
+}
+
+.continue {
+    background: #5b5be6;
+    color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem #4949bd;
+    position: relative;
+    transition: background 0.3s, transform 0.2s; /* Smooth transition for background color */
+}
+
+.continue:hover {
+    box-shadow: none;
+    top: 0.1rem;
+    transform: translateY(-2px); /* Slightly move up on hover */
+    background: #4c4cb2; /* Darker shade on hover */
+}
+
+/* Ripple effect */
+button:active::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear forwards; /* Apply ripple effect */
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4); /* Scale up */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Fade-out effect for exit button */
+.exit:active {
+    opacity: 0; /* Fade out on click */
+}
+.main-heading {
+    text-align: center; /* Center align the heading */
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom: 2rem; /* Space below the heading */
+    color: #ffffff; /* Optional: adjust text color */
+}

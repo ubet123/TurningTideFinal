@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 15px 20px; /* Keep some padding for navbar items */
+    height: 4rem; /* Height of the navbar */
+    font-weight: 800;
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed; /* Keep the navbar fixed */
+    top: 0; /* Set the navbar to the top of the page */
+    left: 0; /* Align the navbar to the left */
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+
+/* Adjusting the navbar links */
+.navbar a {
+    text-decoration: none;
+    color: #41d8f0;
+    margin: 0 15px;
+    font-size: 1.7rem;
+    border: none;
+    transition: border-bottom 0.8s ease-in-out; 
+    position: relative;
+    padding-right: 10px;
+}
+
+.navbar .nav-left {
+    font-size: 2.9rem;
+    color: #2775b4;
+    text-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 3.1px; /* Set the border height */
+    background: #0077b6; /* Color of the border */
+    transition: width 0.4s ease-in-out; /* Smooth transition effect */
+}
+
+/* On hover, expand the border from left to right */
+.navbar a:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+.navbar .nav-center a:hover,
+.navbar .login-icon:hover {
+    color: #333;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: 'Fredoka', sans-serif;  
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    color: #eee;
+    margin-right: 40px;
+}
+
+/* carousel */
+.ngo-carousel {
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.ngo-carousel .ngo-list .ngo-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.ngo-carousel .ngo-list .ngo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-title,
+.ngo-carousel .ngo-list .ngo-item .ngo-topic {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-topic {
+    color: #f1683a;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-buttons button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.ngo-carousel .ngo-list .ngo-item .ngo-buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* thumbnail */
+.ngo-thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.ngo-thumbnail .ngo-item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.ngo-thumbnail .ngo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.ngo-thumbnail .ngo-item .ngo-content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.ngo-thumbnail .ngo-item .ngo-content .ngo-title {
+    font-weight: 500;
+}
+
+.ngo-thumbnail .ngo-item .ngo-content .ngo-description {
+    font-weight: 300;
+}
+
+/* arrows */
+.ngo-arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ngo-arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.ngo-arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) {
+    z-index: 1;
+}
+
+/* animation text in first item */
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-author,
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-title,
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-topic,
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-des,
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-title {
+    animation-delay: 1.2s!important;
+}
+
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-topic {
+    animation-delay: 1.4s!important;
+}
+
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-des {
+    animation-delay: 1.6s!important;
+}
+
+.ngo-carousel .ngo-list .ngo-item:nth-child(1) .ngo-content .ngo-buttons {
+    animation-delay: 1.8s!important;
+}
+
+/* create animation when next click */
+.ngo-carousel.next .ngo-list .ngo-item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.ngo-carousel.next .ngo-thumbnail .ngo-item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.ngo-carousel.prev .ngo-list .ngo-item img {
+    z-index: 100;
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.ngo-carousel.next .ngo-thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+.ngo-carousel .ngo-time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.ngo-carousel.next .ngo-time,
+.ngo-carousel.prev .ngo-time {
+    animation: runningTime 3s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    from {
+        width: 100%
+    }
+    to {
+        width: 0
+    }
+}
+
+/* prev click */
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) {
+    z-index: 2;
+}
+
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.ngo-carousel.prev .ngo-thumbnail .ngo-item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.ngo-carousel.next .ngo-arrows button,
+.ngo-carousel.prev .ngo-arrows button {
+    pointer-events: none;
+}
+
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) .ngo-content .ngo-author,
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) .ngo-content .ngo-title,
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) .ngo-content .ngo-topic,
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) .ngo-content .ngo-des,
+.ngo-carousel.prev .ngo-list .ngo-item:nth-child(2) .ngo-content .ngo-buttons {
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .ngo-carousel .ngo-list .ngo-item .ngo-content {
+        padding-right: 0;
+    }
+
+    .ngo-carousel .ngo-list .ngo-item .ngo-content .ngo-title {
+        font-size: 30px;
+    }
+}
+
+.ngo-footer {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+
+/*Footer*/
+
+ /* General Footer Styles */
+ .footer{
+    background-color:#005f73 ;
+    width:100%;
+ }
+.footer-container {
+    background-color: #005f73; /* Dark Ocean Blue */
+    color: white;
+    text-align: center; /* Center-align text */
+    padding: 40px 20px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1000px;
+    margin: auto;
+    gap: 2rem; /* Space between different footer sections */
+}
+
+/* Footer Top Section Styles */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items */
+    gap: 1rem;
+}
+
+.comp-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.filler-text {
+    font-size: 0.9rem;
+    color: #e9d8a6; /* Light Yellow */
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Spacing between social icons */
+}
+
+.social-link img {
+    width: 24px; /* Set consistent size */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Footer Grid Section */
+.footer-grid {
+    display: flex;
+    justify-content: space-around; /* Even spacing */
+    width: 100%;
+    max-width: 800px; /* Limit the width of the grid */
+}
+
+.footer-grid-column {
+    flex: 1; /* Each column takes equal space */
+}
+
+.footer-grid-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-links-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.footer-links-list li {
+    margin: 5px 0; /* Reduce space between list items */
+}
+
+.footer-link {
+    color: #cae9ff; /* Light blue link color */
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #e9d8a6; /* Light yellow on hover */
+}
+
+/* Footer Bottom Section */
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #e9d8a6;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(233, 216, 166, 0.3); /* Soft top border */
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-grid {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer-grid-column {
+        margin: 0 0 10px 0; /* Space out the columns */
+    }
+}
+

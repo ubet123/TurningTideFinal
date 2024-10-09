@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donation.css">
+    <style>
+        /* Additional styles for full-page image */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        .background-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire viewport */
+            z-index: -1; /* Send to background */
+        }
+
+        .donation-container {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            position: relative; /* Ensure it overlays the image */
+            z-index: 1; /* Bring donation cards to the front */
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-page background image -->
+    <img src="https://t4.ftcdn.net/jpg/02/36/25/59/360_F_236255934_jhDrRIlD5VipgJqf1GlzMESmq7Kue6GE.jpg" alt="Marine Pollution Background" class="background-img">
+
+    <div class="save-message">
+        <h1>We Can Save the Future</h1>
+    </div>
+
+    <div class="donation-container">
+        <!-- Card for Donation Amount -->
+        <div class="donation-card amount-card">
+            <h2>Choose a Donation Amount</h2>
+            <form id="donationForm">
+                <div class="amount-options">
+                    <label>
+                        <input type="radio" name="amount" value="10">
+                        <span>$10</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="amount" value="25">
+                        <span>$25</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="amount" value="50">
+                        <span>$50</span>
+                    </label>
+                    <label>
+                        <input type="text" name="custom-amount" placeholder="Enter a custom donation amount">
+                    </label>
+                </div>
+                <button type="button" id="nextBtn">Next</button>
+            </form>
+        </div>
+
+        <!-- Card for Donation Frequency -->
+        <div class="donation-card frequency-card" id="frequencyCard" style="display: none;">
+            <h3>Choose a Donation Frequency</h3>
+            <form id="frequencyForm">
+                <div class="frequency-options">
+                    <label>
+                        <input type="radio" name="frequency" value="Monthly">
+                        <span>Monthly</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="One Time">
+                        <span>One Time</span>
+                    </label>
+                </div>
+                <button type="button" id="summaryBtn">View Summary</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="summary" id="summary" style="display: none;">
+        <h2>Donation Summary</h2>
+        <p id="summaryAmount"></p>
+        <p id="summaryFrequency"></p>
+        <div class="buttons">
+            <button id="backBtn">Back</button>
+            <button id="checkoutBtn">Go to Checkout</button>
+        </div>
+    </div>
+
+    <script src="donation.js"></script>
+</body>
+</html>
